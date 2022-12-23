@@ -62,6 +62,12 @@ app.get('/404', function (req, res) {
     */
 });
 
+// routes
+require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
+
+// set port, listen for requests
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
